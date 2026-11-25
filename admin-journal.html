@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Журнал — Система складского учёта</title>
+  <title>Журнал действий — СкладУчёт</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -23,8 +23,47 @@
 
   <main class="container">
     <p><a href="profile.html">← Назад к профилю</a></p>
-    <h1>Журнал</h1>
-    <p>Здесь будет журнал действий пользователей.</p>
+
+    <h1>Журнал действий</h1>
+
+    <p>Пример истории действий пользователей в системе.</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Дата и время</th>
+          <th>Пользователь</th>
+          <th>Действие</th>
+          <th>Объект</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Дата и время">20.11.2026 10:15</td>
+          <td data-label="Пользователь">Иванов И.И.</td>
+          <td data-label="Действие">Поступление товара</td>
+          <td data-label="Объект">
+            <a href="operation-card.html">Операция ОП-001</a>
+          </td>
+        </tr>
+        <tr>
+          <td data-label="Дата и время">21.11.2026 14:30</td>
+          <td data-label="Пользователь">Смирнова А.С.</td>
+          <td data-label="Действие">Перемещение товара</td>
+          <td data-label="Объект">Операция ОП-002</td>
+        </tr>
+        <tr>
+          <td data-label="Дата и время">24.11.2026 16:00</td>
+          <td data-label="Пользователь">Иванов И.И.</td>
+          <td data-label="Действие">Завершение инвентаризации</td>
+          <td data-label="Объект">
+            <a href="inventory.html">Инвентаризация ИНВ-001</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><a href="admin-users.html">Перейти к пользователям →</a></p>
   </main>
 
   <footer class="site-footer">

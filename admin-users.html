@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Пользователи — Система складского учёта</title>
+  <title>Пользователи — СкладУчёт</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -23,8 +23,51 @@
 
   <main class="container">
     <p><a href="profile.html">← Назад к профилю</a></p>
+
     <h1>Пользователи</h1>
-    <p>Здесь будет таблица пользователей и ролей.</p>
+
+    <p>
+      Пример списка пользователей. Изменение ролей и статусов пока недоступно.
+    </p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Имя</th>
+          <th>Email</th>
+          <th>Роль</th>
+          <th>Статус</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Имя">Иванов Иван Иванович</td>
+          <td data-label="Email">ivanov@example.com</td>
+          <td data-label="Роль">Администратор</td>
+          <td data-label="Статус">
+            <span class="badge badge-ok">Активен</span>
+          </td>
+        </tr>
+        <tr>
+          <td data-label="Имя">Смирнова Анна Сергеевна</td>
+          <td data-label="Email">smirnova@example.com</td>
+          <td data-label="Роль">Кладовщик</td>
+          <td data-label="Статус">
+            <span class="badge badge-ok">Активен</span>
+          </td>
+        </tr>
+        <tr>
+          <td data-label="Имя">Волков Павел Андреевич</td>
+          <td data-label="Email">volkov@example.com</td>
+          <td data-label="Роль">Кладовщик</td>
+          <td data-label="Статус">
+            <span class="badge badge-danger">Неактивен</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><a href="admin-journal.html">Перейти к журналу действий →</a></p>
   </main>
 
   <footer class="site-footer">

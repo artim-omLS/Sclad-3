@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Инвентаризация — Система складского учёта</title>
+  <title>Инвентаризация — СкладУчёт</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -23,7 +23,64 @@
 
   <main class="container">
     <h1>Инвентаризация</h1>
-    <p>Здесь будет форма инвентаризации с расхождениями.</p>
+
+    <p>
+      Пример сверки фактического количества товаров с учётными остатками.
+    </p>
+
+    <section class="card" aria-label="Данные инвентаризации">
+      <p><strong>Номер:</strong> ИНВ-001</p>
+      <p><strong>Дата:</strong> 24.11.2026</p>
+      <p><strong>Склад:</strong> Склад А</p>
+      <p><strong>Ответственный:</strong> Иванов И.И.</p>
+      <p><strong>Статус:</strong> Завершена</p>
+    </section>
+
+    <h2>Результаты сверки</h2>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Товар</th>
+          <th>По учёту</th>
+          <th>Фактически</th>
+          <th>Расхождение</th>
+          <th>Результат</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Товар">Кабель USB-C 1м</td>
+          <td data-label="По учёту">6</td>
+          <td data-label="Фактически">6</td>
+          <td data-label="Расхождение">0</td>
+          <td data-label="Результат">
+            <span class="badge badge-ok">Совпадает</span>
+          </td>
+        </tr>
+        <tr>
+          <td data-label="Товар">Мышь беспроводная</td>
+          <td data-label="По учёту">12</td>
+          <td data-label="Фактически">11</td>
+          <td data-label="Расхождение">−1</td>
+          <td data-label="Результат">
+            <span class="badge badge-danger">Недостача</span>
+          </td>
+        </tr>
+        <tr>
+          <td data-label="Товар">SSD 500 ГБ</td>
+          <td data-label="По учёту">1</td>
+          <td data-label="Фактически">2</td>
+          <td data-label="Расхождение">+1</td>
+          <td data-label="Результат">
+            <span class="badge badge-danger">Излишек</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Расхождение = фактическое количество − количество по учёту.</p>
+    <p>Данные приведены для примера и пока не изменяют остатки.</p>
   </main>
 
   <footer class="site-footer">

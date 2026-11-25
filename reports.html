@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Отчёты — Система складского учёта</title>
+  <title>Отчёты — СкладУчёт</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -23,7 +23,75 @@
 
   <main class="container">
     <h1>Отчёты</h1>
-    <p>Здесь будут отчёты по остаткам, движениям и товарам ниже минимума.</p>
+
+    <p>
+      Пример отчёта по остаткам на складе А. Фильтры и выгрузка
+      пока не работают.
+    </p>
+
+    <form class="form">
+      <div class="form-row">
+        <label for="report-warehouse">Склад</label>
+        <select id="report-warehouse" name="warehouse">
+          <option>Склад А</option>
+          <option>Склад Б</option>
+          <option>Склад В</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="report-date">Дата отчёта</label>
+        <input type="date" id="report-date" name="date" value="2026-11-24">
+      </div>
+
+      <div class="form-actions">
+        <button type="button" class="btn btn-primary">
+          Сформировать отчёт
+        </button>
+        <button type="button" class="btn btn-secondary">
+          Скачать CSV
+        </button>
+      </div>
+    </form>
+
+    <h2>Остатки на складе А</h2>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Артикул</th>
+          <th>Товар</th>
+          <th>Остаток</th>
+          <th>Минимум</th>
+          <th>Статус</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Артикул">A-001</td>
+          <td data-label="Товар">Кабель USB-C 1м</td>
+          <td data-label="Остаток">6</td>
+          <td data-label="Минимум">5</td>
+          <td data-label="Статус"><span class="badge badge-ok">В норме</span></td>
+        </tr>
+        <tr>
+          <td data-label="Артикул">A-002</td>
+          <td data-label="Товар">Мышь беспроводная</td>
+          <td data-label="Остаток">12</td>
+          <td data-label="Минимум">3</td>
+          <td data-label="Статус"><span class="badge badge-ok">В норме</span></td>
+        </tr>
+        <tr>
+          <td data-label="Артикул">C-101</td>
+          <td data-label="Товар">SSD 500 ГБ</td>
+          <td data-label="Остаток">1</td>
+          <td data-label="Минимум">2</td>
+          <td data-label="Статус">
+            <span class="badge badge-danger">Ниже минимума</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </main>
 
   <footer class="site-footer">
