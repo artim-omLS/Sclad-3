@@ -23,8 +23,34 @@
 
   <main class="container">
     <p><a href="warehouses.html">← Назад к складам</a></p>
-    <h1>Карточка склада</h1>
-    <p>Здесь будут данные склада, остатки и связанные операции.</p>
+    <h1>Склад А</h1>
+
+    <section class="card" aria-label="Данные склада">
+      <p><strong>Адрес:</strong> ул. Складская, 1</p>
+      <p><strong>Ответственный:</strong> Иванов И.И.</p>
+      <p><strong>Статус:</strong> Активен</p>
+    </section>
+
+    <h2>Товары на складе</h2>
+    <table class="data-table">
+      <thead><tr><th>Товар</th><th>Артикул</th><th>Остаток</th><th>Статус</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Товар"><a href="product-card.html">Кабель USB-C 1м</a></td><td data-label="Артикул">A-001</td><td data-label="Остаток">6</td><td data-label="Статус"><span class="badge badge-ok">В норме</span></td></tr>
+        <tr><td data-label="Товар"><a href="product-card.html">Мышь беспроводная</a></td><td data-label="Артикул">A-002</td><td data-label="Остаток">12</td><td data-label="Статус"><span class="badge badge-ok">В норме</span></td></tr>
+        <tr><td data-label="Товар"><a href="product-card.html">SSD 500 ГБ</a></td><td data-label="Артикул">C-101</td><td data-label="Остаток">1</td><td data-label="Статус"><span class="badge badge-danger">Ниже минимума</span></td></tr>
+        <tr><td data-label="Товар"><a href="product-card.html">Бумага А4, 500 листов</a></td><td data-label="Артикул">B-010</td><td data-label="Остаток">25</td><td data-label="Статус"><span class="badge badge-ok">В норме</span></td></tr>
+      </tbody>
+    </table>
+
+    <h2>Связанные операции</h2>
+    <table class="data-table">
+      <thead><tr><th>Дата</th><th>Тип</th><th>Товар</th><th>Количество</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Дата">20.11.2026</td><td data-label="Тип">Поступление</td><td data-label="Товар">Кабель USB-C 1м</td><td data-label="Количество">+10</td></tr>
+        <tr><td data-label="Дата">21.11.2026</td><td data-label="Тип">Перемещение</td><td data-label="Товар">Кабель USB-C 1м</td><td data-label="Количество">−4</td></tr>
+        <tr><td data-label="Дата">23.11.2026</td><td data-label="Тип">Поступление</td><td data-label="Товар">SSD 500 ГБ</td><td data-label="Количество">+3</td></tr>
+      </tbody>
+    </table>
   </main>
 
   <footer class="site-footer">
