@@ -24,30 +24,140 @@
   <main class="container">
     <h1>Товары</h1>
 
+    <p>
+      Статус в этой таблице показывает общий остаток по всем складам.
+      На отдельном складе остаток может быть ниже минимума.
+    </p>
+
     <div class="toolbar">
-      <input type="search" placeholder="Поиск по артикулу или штрихкоду…" aria-label="Поиск по товарам">
-      <a href="product-card.html" class="btn btn-primary">Добавить товар</a>
+      <input
+        type="search"
+        placeholder="Поиск по артикулу или штрихкоду…"
+        aria-label="Поиск по товарам"
+      >
+      <button type="button" class="btn btn-primary">
+        Добавить товар
+      </button>
     </div>
+
+    <p>
+      Поиск и добавление пока не работают. Для примера доступна карточка
+      товара «Кабель USB-C 1м».
+    </p>
 
     <table class="data-table">
       <thead>
-        <tr><th>Артикул</th><th>Товар</th><th>Штрихкод</th><th>Ед.</th><th>Минимум</th><th>Всего</th><th>Статус</th></tr>
+        <tr>
+          <th>Артикул</th>
+          <th>Товар</th>
+          <th>Штрихкод</th>
+          <th>Ед.</th>
+          <th>Минимум</th>
+          <th>Всего</th>
+          <th>Статус</th>
+        </tr>
       </thead>
+
       <tbody>
-        <tr><td data-label="Артикул">A-001</td><td data-label="Товар"><a href="product-card.html">Кабель USB-C 1м</a></td><td data-label="Штрихкод">4600001000011</td><td data-label="Ед.">шт</td><td data-label="Минимум">5</td><td data-label="Всего">8</td><td data-label="Статус"><span class="badge badge-ok">В норме</span></td></tr>
-        <tr><td data-label="Артикул">A-002</td><td data-label="Товар"><a href="product-card.html">Мышь беспроводная</a></td><td data-label="Штрихкод">4600001000028</td><td data-label="Ед.">шт</td><td data-label="Минимум">3</td><td data-label="Всего">17</td><td data-label="Статус"><span class="badge badge-ok">В норме</span></td></tr>
-        <tr><td data-label="Артикул">A-003</td><td data-label="Товар"><a href="product-card.html">Клавиатура USB</a></td><td data-label="Штрихкод">4600001000035</td><td data-label="Ед.">шт</td><td data-label="Минимум">2</td><td data-label="Всего">9</td><td data-label="Статус"><span class="badge badge-ok">В норме</span></td></tr>
-        <tr><td data-label="Артикул">B-010</td><td data-label="Товар"><a href="product-card.html">Бумага А4, 500 листов</a></td><td data-label="Штрихкод">4600001000103</td><td data-label="Ед.">упак</td><td data-label="Минимум">10</td><td data-label="Всего">33</td><td data-label="Статус"><span class="badge badge-ok">В норме</span></td></tr>
-        <tr><td data-label="Артикул">B-011</td><td data-label="Товар"><a href="product-card.html">Ручка синяя</a></td><td data-label="Штрихкод">4600001000110</td><td data-label="Ед.">шт</td><td data-label="Минимум">20</td><td data-label="Всего">45</td><td data-label="Статус"><span class="badge badge-ok">В норме</span></td></tr>
-        <tr><td data-label="Артикул">C-100</td><td data-label="Товар"><a href="product-card.html">Картридж TN-1075</a></td><td data-label="Штрихкод">4600001001001</td><td data-label="Ед.">шт</td><td data-label="Минимум">1</td><td data-label="Всего">4</td><td data-label="Статус"><span class="badge badge-ok">В норме</span></td></tr>
-        <tr><td data-label="Артикул">C-101</td><td data-label="Товар"><a href="product-card.html">SSD 500 ГБ</a></td><td data-label="Штрихкод">4600001001018</td><td data-label="Ед.">шт</td><td data-label="Минимум">2</td><td data-label="Всего">4</td><td data-label="Статус"><span class="badge badge-danger">Ниже минимума</span></td></tr>
-        <tr><td data-label="Артикул">C-102</td><td data-label="Товар"><a href="product-card.html">Монитор 24"</a></td><td data-label="Штрихкод">4600001001025</td><td data-label="Ед.">шт</td><td data-label="Минимум">1</td><td data-label="Всего">3</td><td data-label="Статус"><span class="badge badge-ok">В норме</span></td></tr>
+        <tr>
+          <td data-label="Артикул">A-001</td>
+          <td data-label="Товар">
+            <a href="product-card.html">Кабель USB-C 1м</a>
+          </td>
+          <td data-label="Штрихкод">4600001000011</td>
+          <td data-label="Ед.">шт</td>
+          <td data-label="Минимум">5</td>
+          <td data-label="Всего">8</td>
+          <td data-label="Статус">
+            <span class="badge badge-ok">В норме</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Артикул">A-002</td>
+          <td data-label="Товар">Мышь беспроводная</td>
+          <td data-label="Штрихкод">4600001000028</td>
+          <td data-label="Ед.">шт</td>
+          <td data-label="Минимум">3</td>
+          <td data-label="Всего">17</td>
+          <td data-label="Статус">
+            <span class="badge badge-ok">В норме</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Артикул">A-003</td>
+          <td data-label="Товар">Клавиатура USB</td>
+          <td data-label="Штрихкод">4600001000035</td>
+          <td data-label="Ед.">шт</td>
+          <td data-label="Минимум">2</td>
+          <td data-label="Всего">9</td>
+          <td data-label="Статус">
+            <span class="badge badge-ok">В норме</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Артикул">B-010</td>
+          <td data-label="Товар">Бумага А4, 500 листов</td>
+          <td data-label="Штрихкод">4600001000103</td>
+          <td data-label="Ед.">упак</td>
+          <td data-label="Минимум">10</td>
+          <td data-label="Всего">33</td>
+          <td data-label="Статус">
+            <span class="badge badge-ok">В норме</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Артикул">B-011</td>
+          <td data-label="Товар">Ручка синяя</td>
+          <td data-label="Штрихкод">4600001000110</td>
+          <td data-label="Ед.">шт</td>
+          <td data-label="Минимум">20</td>
+          <td data-label="Всего">45</td>
+          <td data-label="Статус">
+            <span class="badge badge-ok">В норме</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Артикул">C-100</td>
+          <td data-label="Товар">Картридж TN-1075</td>
+          <td data-label="Штрихкод">4600001001001</td>
+          <td data-label="Ед.">шт</td>
+          <td data-label="Минимум">1</td>
+          <td data-label="Всего">4</td>
+          <td data-label="Статус">
+            <span class="badge badge-ok">В норме</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Артикул">C-101</td>
+          <td data-label="Товар">SSD 500 ГБ</td>
+          <td data-label="Штрихкод">4600001001018</td>
+          <td data-label="Ед.">шт</td>
+          <td data-label="Минимум">2</td>
+          <td data-label="Всего">4</td>
+          <td data-label="Статус">
+            <span class="badge badge-ok">В норме</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Артикул">C-102</td>
+          <td data-label="Товар">Монитор 24"</td>
+          <td data-label="Штрихкод">4600001001025</td>
+          <td data-label="Ед.">шт</td>
+          <td data-label="Минимум">1</td>
+          <td data-label="Всего">3</td>
+          <td data-label="Статус">
+            <span class="badge badge-ok">В норме</span>
+          </td>
+        </tr>
       </tbody>
     </table>
   </main>
-
-  <footer class="site-footer">
-    <p>Система складского учёта • Практика • Вариант 03</p>
-  </footer>
 </body>
 </html>

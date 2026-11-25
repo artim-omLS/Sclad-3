@@ -25,23 +25,28 @@
     <h1>Отчёты</h1>
 
     <p>
-      Пример отчёта по остаткам на складе А. Фильтры и выгрузка
-      пока не работают.
+      Ниже показаны статические примеры отчётов. Выбор фильтров,
+      формирование отчёта и выгрузка CSV пока не работают.
     </p>
 
     <form class="form">
       <div class="form-row">
         <label for="report-warehouse">Склад</label>
         <select id="report-warehouse" name="warehouse">
-          <option>Склад А</option>
-          <option>Склад Б</option>
-          <option>Склад В</option>
+          <option value="A">Склад А</option>
+          <option value="B">Склад Б</option>
+          <option value="V">Склад В</option>
         </select>
       </div>
 
       <div class="form-row">
         <label for="report-date">Дата отчёта</label>
-        <input type="date" id="report-date" name="date" value="2026-11-24">
+        <input
+          type="date"
+          id="report-date"
+          name="date"
+          value="2026-11-24"
+        >
       </div>
 
       <div class="form-actions">
@@ -54,7 +59,7 @@
       </div>
     </form>
 
-    <h2>Остатки на складе А</h2>
+    <h2>Пример остатков на складе А</h2>
 
     <table class="data-table">
       <thead>
@@ -66,21 +71,28 @@
           <th>Статус</th>
         </tr>
       </thead>
+
       <tbody>
         <tr>
           <td data-label="Артикул">A-001</td>
           <td data-label="Товар">Кабель USB-C 1м</td>
           <td data-label="Остаток">6</td>
           <td data-label="Минимум">5</td>
-          <td data-label="Статус"><span class="badge badge-ok">В норме</span></td>
+          <td data-label="Статус">
+            <span class="badge badge-ok">В норме</span>
+          </td>
         </tr>
+
         <tr>
           <td data-label="Артикул">A-002</td>
           <td data-label="Товар">Мышь беспроводная</td>
           <td data-label="Остаток">12</td>
           <td data-label="Минимум">3</td>
-          <td data-label="Статус"><span class="badge badge-ok">В норме</span></td>
+          <td data-label="Статус">
+            <span class="badge badge-ok">В норме</span>
+          </td>
         </tr>
+
         <tr>
           <td data-label="Артикул">C-101</td>
           <td data-label="Товар">SSD 500 ГБ</td>
@@ -92,10 +104,75 @@
         </tr>
       </tbody>
     </table>
-  </main>
 
-  <footer class="site-footer">
-    <p>Система складского учёта • Практика • Вариант 03</p>
-  </footer>
+    <h2>Пример движений товаров</h2>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Дата</th>
+          <th>Операция</th>
+          <th>Товар</th>
+          <th>Склад</th>
+          <th>Количество</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td data-label="Дата">20.11.2026</td>
+          <td data-label="Операция">Поступление</td>
+          <td data-label="Товар">Кабель USB-C 1м</td>
+          <td data-label="Склад">Склад А</td>
+          <td data-label="Количество">10</td>
+        </tr>
+
+        <tr>
+          <td data-label="Дата">21.11.2026</td>
+          <td data-label="Операция">Перемещение</td>
+          <td data-label="Товар">Кабель USB-C 1м</td>
+          <td data-label="Склад">А → Б</td>
+          <td data-label="Количество">4</td>
+        </tr>
+
+        <tr>
+          <td data-label="Дата">22.11.2026</td>
+          <td data-label="Операция">Списание</td>
+          <td data-label="Товар">Кабель USB-C 1м</td>
+          <td data-label="Склад">Склад Б</td>
+          <td data-label="Количество">2</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Пример товаров ниже минимума</h2>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Товар</th>
+          <th>Склад</th>
+          <th>Остаток</th>
+          <th>Минимум</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td data-label="Товар">Кабель USB-C 1м</td>
+          <td data-label="Склад">Склад Б</td>
+          <td data-label="Остаток">2</td>
+          <td data-label="Минимум">5</td>
+        </tr>
+
+        <tr>
+          <td data-label="Товар">SSD 500 ГБ</td>
+          <td data-label="Склад">Склад А</td>
+          <td data-label="Остаток">1</td>
+          <td data-label="Минимум">2</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
 </body>
 </html>

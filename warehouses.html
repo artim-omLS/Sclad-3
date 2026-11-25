@@ -25,41 +25,61 @@
     <h1>Склады</h1>
 
     <div class="toolbar">
-      <a href="warehouse-card.html" class="btn btn-primary">Добавить склад</a>
+      <button type="button" class="btn btn-primary">
+        Добавить склад
+      </button>
     </div>
+
+    <p>
+      Добавление склада пока не работает. Для примера доступна карточка
+      склада А. Итоги по складам пока не рассчитаны.
+    </p>
 
     <table class="data-table">
       <thead>
-        <tr><th>Склад</th><th>Адрес</th><th>Позиций</th><th>Всего единиц</th><th>Статус</th></tr>
+        <tr>
+          <th>Склад</th>
+          <th>Адрес</th>
+          <th>Позиций</th>
+          <th>Всего единиц</th>
+          <th>Статус</th>
+        </tr>
       </thead>
+
       <tbody>
         <tr>
-          <td data-label="Склад"><a href="warehouse-card.html">Склад А</a></td>
+          <td data-label="Склад">
+            <a href="warehouse-card.html">Склад А</a>
+          </td>
           <td data-label="Адрес">ул. Складская, 1</td>
-          <td data-label="Позиций">8</td>
-          <td data-label="Всего единиц">62</td>
-          <td data-label="Статус"><span class="badge badge-ok">Активен</span></td>
+          <td data-label="Позиций">Не рассчитано</td>
+          <td data-label="Всего единиц">Не рассчитано</td>
+          <td data-label="Статус">
+            <span class="badge badge-ok">Активен</span>
+          </td>
         </tr>
+
         <tr>
-          <td data-label="Склад"><a href="warehouse-card.html">Склад Б</a></td>
+          <td data-label="Склад">Склад Б</td>
           <td data-label="Адрес">ул. Складская, 2</td>
-          <td data-label="Позиций">5</td>
-          <td data-label="Всего единиц">28</td>
-          <td data-label="Статус"><span class="badge badge-ok">Активен</span></td>
+          <td data-label="Позиций">Не рассчитано</td>
+          <td data-label="Всего единиц">Не рассчитано</td>
+          <td data-label="Статус">
+            <span class="badge badge-ok">Активен</span>
+          </td>
         </tr>
+
         <tr>
-          <td data-label="Склад"><a href="warehouse-card.html">Склад В</a></td>
+          <td data-label="Склад">Склад В</td>
           <td data-label="Адрес">ул. Архивная, 5</td>
-          <td data-label="Позиций">2</td>
-          <td data-label="Всего единиц">4</td>
-          <td data-label="Статус"><span class="badge badge-ok">Активен</span></td>
+          <td data-label="Позиций">Не рассчитано</td>
+          <td data-label="Всего единиц">Не рассчитано</td>
+          <td data-label="Статус">
+            <span class="badge badge-ok">Активен</span>
+          </td>
         </tr>
       </tbody>
     </table>
   </main>
-
-  <footer class="site-footer">
-    <p>Система складского учёта • Практика • Вариант 03</p>
-  </footer>
 </body>
 </html>

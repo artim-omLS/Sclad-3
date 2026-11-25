@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Роли — СкладУчёт</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="logo">СкладУчёт</a>
+    <nav class="main-nav" aria-label="Основная навигация">
+      <a href="index.html">Главная</a>
+      <a href="products.html">Товары</a>
+      <a href="warehouses.html">Склады</a>
+      <a href="suppliers.html">Поставщики</a>
+      <a href="operations.html">Операции</a>
+      <a href="inventory.html">Инвентаризация</a>
+      <a href="reports.html">Отчёты</a>
+      <a href="profile.html">Профиль</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <p><a href="profile.html">← Назад к профилю</a></p>
+
+    <h1>Роли пользователей</h1>
+
+    <p>
+      Пример ролей и прав доступа. Настоящая проверка прав
+      и изменение ролей пока не реализованы.
+    </p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Роль</th>
+          <th>Описание</th>
+          <th>Примеры доступа</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td data-label="Роль">Кладовщик</td>
+          <td data-label="Описание">
+            Работает с товарами на назначенном складе.
+          </td>
+          <td data-label="Примеры доступа">
+            Остатки, операции и инвентаризация назначенного склада.
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Роль">Администратор</td>
+          <td data-label="Описание">
+            Управляет настройками системы и пользователями.
+          </td>
+          <td data-label="Примеры доступа">
+            Справочники, склады, пользователи и отчёты.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><a href="admin-users.html">Перейти к пользователям →</a></p>
+    <p><a href="admin-journal.html">Перейти к журналу действий →</a></p>
+  </main>
+</body>
+</html>

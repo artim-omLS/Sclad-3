@@ -25,47 +25,99 @@
     <h1>Поставщики</h1>
 
     <div class="toolbar">
-      <a href="#edit" class="btn btn-primary">Добавить поставщика</a>
+      <a href="#edit" class="btn btn-primary">К форме поставщика</a>
     </div>
 
     <table class="data-table">
       <thead>
-        <tr><th>Поставщик</th><th>Контактное лицо</th><th>Телефон</th><th>Email</th><th>Товаров</th></tr>
+        <tr>
+          <th>Поставщик</th>
+          <th>Контактное лицо</th>
+          <th>Телефон</th>
+          <th>Email</th>
+          <th>Товаров</th>
+        </tr>
       </thead>
+
       <tbody>
-        <tr><td data-label="Поставщик">ООО «ТехноСнаб»</td><td data-label="Контактное лицо">Петров А.С.</td><td data-label="Телефон">+7 (900) 111-22-33</td><td data-label="Email">info@tehnosnab.example</td><td data-label="Товаров">4</td></tr>
-        <tr><td data-label="Поставщик">ИП «ОфисМаркет»</td><td data-label="Контактное лицо">Сидорова М.В.</td><td data-label="Телефон">+7 (900) 222-33-44</td><td data-label="Email">zakaz@officemarket.example</td><td data-label="Товаров">3</td></tr>
-        <tr><td data-label="Поставщик">ООО «КанцЛогистика»</td><td data-label="Контактное лицо">Кузнецов Д.П.</td><td data-label="Телефон">+7 (900) 333-44-55</td><td data-label="Email">sales@kanclog.example</td><td data-label="Товаров">1</td></tr>
+        <tr>
+          <td data-label="Поставщик">ООО «ТехноСнаб»</td>
+          <td data-label="Контактное лицо">Петров А.С.</td>
+          <td data-label="Телефон">+7 (900) 111-22-33</td>
+          <td data-label="Email">info@tehnosnab.example</td>
+          <td data-label="Товаров">4</td>
+        </tr>
+
+        <tr>
+          <td data-label="Поставщик">ИП «ОфисМаркет»</td>
+          <td data-label="Контактное лицо">Сидорова М.В.</td>
+          <td data-label="Телефон">+7 (900) 222-33-44</td>
+          <td data-label="Email">zakaz@officemarket.example</td>
+          <td data-label="Товаров">3</td>
+        </tr>
+
+        <tr>
+          <td data-label="Поставщик">ООО «КанцЛогистика»</td>
+          <td data-label="Контактное лицо">Кузнецов Д.П.</td>
+          <td data-label="Телефон">+7 (900) 333-44-55</td>
+          <td data-label="Email">sales@kanclog.example</td>
+          <td data-label="Товаров">1</td>
+        </tr>
       </tbody>
     </table>
 
-    <h2 id="edit">Редактирование поставщика</h2>
-    <form class="form" action="#" method="post">
+    <h2 id="edit">Пример редактирования поставщика</h2>
+
+    <p>
+      Это демонстрационная форма. Изменения пока не сохраняются.
+    </p>
+
+    <form class="form">
       <div class="form-row">
         <label for="supplier-name">Название</label>
-        <input type="text" id="supplier-name" name="supplier-name" value="ООО «ТехноСнаб»">
+        <input
+          type="text"
+          id="supplier-name"
+          name="supplier-name"
+          value="ООО «ТехноСнаб»"
+        >
       </div>
+
       <div class="form-row">
         <label for="supplier-contact">Контактное лицо</label>
-        <input type="text" id="supplier-contact" name="supplier-contact" value="Петров А.С.">
+        <input
+          type="text"
+          id="supplier-contact"
+          name="supplier-contact"
+          value="Петров А.С."
+        >
       </div>
+
       <div class="form-row">
         <label for="supplier-phone">Телефон</label>
-        <input type="tel" id="supplier-phone" name="supplier-phone" value="+7 (900) 111-22-33">
+        <input
+          type="tel"
+          id="supplier-phone"
+          name="supplier-phone"
+          value="+7 (900) 111-22-33"
+        >
       </div>
+
       <div class="form-row">
         <label for="supplier-email">Email</label>
-        <input type="email" id="supplier-email" name="supplier-email" value="info@tehnosnab.example">
+        <input
+          type="email"
+          id="supplier-email"
+          name="supplier-email"
+          value="info@tehnosnab.example"
+        >
       </div>
+
       <div class="form-actions">
-        <button type="submit" class="btn btn-primary">Сохранить</button>
+        <button type="button" class="btn btn-primary">Сохранить</button>
         <a href="suppliers.html" class="btn btn-secondary">Отмена</a>
       </div>
     </form>
   </main>
-
-  <footer class="site-footer">
-    <p>Система складского учёта • Практика • Вариант 03</p>
-  </footer>
 </body>
 </html>
