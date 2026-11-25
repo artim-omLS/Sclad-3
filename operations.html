@@ -9,6 +9,7 @@
 <body>
   <header class="site-header">
     <a href="index.html" class="logo">СкладУчёт</a>
+
     <nav class="main-nav" aria-label="Основная навигация">
       <a href="index.html">Главная</a>
       <a href="products.html">Товары</a>
@@ -23,11 +24,66 @@
 
   <main class="container">
     <h1>Операции</h1>
-    <p>Здесь будет список операций. <a href="operation-form.html">Новая операция</a></p>
-  </main>
 
-  <footer class="site-footer">
-    <p>Система складского учёта • Практика • Вариант 03</p>
-  </footer>
-</body>
-</html>
+    <p>
+      Здесь отображается история поступлений, списаний и перемещений товаров.
+    </p>
+
+    <div class="toolbar">
+      <a href="operation-form.html" class="btn btn-primary">
+        Новая операция
+      </a>
+    </div>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Номер</th>
+          <th>Дата</th>
+          <th>Тип</th>
+          <th>Склад</th>
+          <th>Товар</th>
+          <th>Количество</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td data-label="Номер">
+            <a href="operation-card.html">ОП-001</a>
+          </td>
+          <td data-label="Дата">20.11.2026</td>
+          <td data-label="Тип">Поступление</td>
+          <td data-label="Склад">Склад А</td>
+          <td data-label="Товар">Кабель USB-C 1м</td>
+          <td data-label="Количество">10</td>
+        </tr>
+
+        <tr>
+          <td data-label="Номер">ОП-002</td>
+          <td data-label="Дата">21.11.2026</td>
+          <td data-label="Тип">Перемещение</td>
+          <td data-label="Склад">А → Б</td>
+          <td data-label="Товар">Кабель USB-C 1м</td>
+          <td data-label="Количество">4</td>
+        </tr>
+
+        <tr>
+          <td data-label="Номер">ОП-003</td>
+          <td data-label="Дата">22.11.2026</td>
+          <td data-label="Тип">Списание</td>
+          <td data-label="Склад">Склад Б</td>
+          <td data-label="Товар">Кабель USB-C 1м</td>
+          <td data-label="Количество">2</td>
+        </tr>
+
+        <tr>
+          <td data-label="Номер">ОП-004</td>
+          <td data-label="Дата">23.11.2026</td>
+          <td data-label="Тип">Поступление</td>
+          <td data-label="Склад">Склад А</td>
+          <td data-label="Товар">SSD 500 ГБ</td>
+          <td data-label="Количество">3</td>
+        </tr>
+      </tbody>
+    

@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Карточка операции — Система складского учёта</title>
+  <title>Операция ОП-001 — Система складского учёта</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="site-header">
     <a href="index.html" class="logo">СкладУчёт</a>
+
     <nav class="main-nav" aria-label="Основная навигация">
       <a href="index.html">Главная</a>
       <a href="products.html">Товары</a>
@@ -23,8 +24,41 @@
 
   <main class="container">
     <p><a href="operations.html">← Назад к операциям</a></p>
-    <h1>Карточка операции</h1>
-    <p>Здесь будут детали операции и позиции.</p>
+
+    <h1>Операция ОП-001</h1>
+
+    <section class="card" aria-label="Информация об операции">
+      <p><strong>Тип:</strong> Поступление</p>
+      <p><strong>Дата:</strong> 20.11.2026</p>
+      <p><strong>Склад:</strong> Склад А</p>
+      <p><strong>Поставщик:</strong> ООО «ТехноСнаб»</p>
+      <p><strong>Ответственный:</strong> Иванов И.И.</p>
+      <p><strong>Комментарий:</strong> Поставка товара на склад</p>
+    </section>
+
+    <h2>Товары в операции</h2>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Артикул</th>
+          <th>Товар</th>
+          <th>Количество</th>
+          <th>Единица</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td data-label="Артикул">A-001</td>
+          <td data-label="Товар">
+            <a href="product-card.html">Кабель USB-C 1м</a>
+          </td>
+          <td data-label="Количество">10</td>
+          <td data-label="Единица">шт</td>
+        </tr>
+      </tbody>
+    </table>
   </main>
 
   <footer class="site-footer">
