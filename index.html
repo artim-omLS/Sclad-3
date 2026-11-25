@@ -6,9 +6,11 @@
   <title>Главная — Система складского учёта</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <header class="site-header">
     <a href="index.html" class="logo">СкладУчёт</a>
+
     <nav class="main-nav" aria-label="Основная навигация">
       <a href="index.html">Главная</a>
       <a href="products.html">Товары</a>
@@ -24,48 +26,146 @@
   <main class="container">
     <h1>Главная</h1>
 
-    <section class="stats" aria-label="Сводка">
-      <div class="stat-card"><div class="num">8</div><div class="label">Товаров</div></div>
-      <div class="stat-card"><div class="num">3</div><div class="label">Складов</div></div>
-      <div class="stat-card"><div class="num">2</div><div class="label">Критических остатков</div></div>
-      <div class="stat-card"><div class="num">6</div><div class="label">Операций за неделю</div></div>
+    <section class="stats-grid" aria-label="Общая статистика">
+      <div class="stat-card">
+        <strong>8</strong>
+        <span>Товаров</span>
+      </div>
+
+      <div class="stat-card">
+        <strong>3</strong>
+        <span>Складов</span>
+      </div>
+
+      <div class="stat-card">
+        <strong>2</strong>
+        <span>Критических остатков</span>
+      </div>
+
+      <div class="stat-card">
+        <strong>6</strong>
+        <span>Операций за неделю</span>
+      </div>
     </section>
 
-    <h2>Критические остатки</h2>
-    <table class="data-table">
-      <thead>
-        <tr><th>Товар</th><th>Склад</th><th>Остаток</th><th>Минимум</th><th>Статус</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td data-label="Товар"><a href="product-card.html">Кабель USB-C 1м</a></td>
-          <td data-label="Склад">Склад Б</td>
-          <td data-label="Остаток">2</td>
-          <td data-label="Минимум">5</td>
-          <td data-label="Статус"><span class="badge badge-danger">Ниже минимума</span></td>
-        </tr>
-        <tr>
-          <td data-label="Товар"><a href="product-card.html">SSD 500 ГБ</a></td>
-          <td data-label="Склад">Склад А</td>
-          <td data-label="Остаток">1</td>
-          <td data-label="Минимум">2</td>
-          <td data-label="Статус"><span class="badge badge-danger">Ниже минимума</span></td>
-        </tr>
-      </tbody>
-    </table>
+    <section aria-labelledby="critical-title">
+      <h2 id="critical-title">Критические остатки</h2>
 
-    <h2>Последние операции</h2>
-    <table class="data-table">
-      <thead>
-        <tr><th>Дата</th><th>Тип</th><th>Склад</th><th>Товар</th><th>Количество</th></tr>
-      </thead>
-      <tbody>
-        <tr><td data-label="Дата">20.11.2026</td><td data-label="Тип">Поступление</td><td data-label="Склад">Склад А</td><td data-label="Товар">Кабель USB-C 1м</td><td data-label="Количество">10</td></tr>
-        <tr><td data-label="Дата">21.11.2026</td><td data-label="Тип">Перемещение</td><td data-label="Склад">А → Б</td><td data-label="Товар">Кабель USB-C 1м</td><td data-label="Количество">4</td></tr>
-        <tr><td data-label="Дата">22.11.2026</td><td data-label="Тип">Списание</td><td data-label="Склад">Склад Б</td><td data-label="Товар">Кабель USB-C 1м</td><td data-label="Количество">2</td></tr>
-        <tr><td data-label="Дата">23.11.2026</td><td data-label="Тип">Поступление</td><td data-label="Склад">Склад А</td><td data-label="Товар">SSD 500 ГБ</td><td data-label="Количество">3</td></tr>
-      </tbody>
-    </table>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Товар</th>
+            <th>Склад</th>
+            <th>Остаток</th>
+            <th>Минимум</th>
+            <th>Статус</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td data-label="Товар">
+              <a href="product-card.html">Кабель USB-C 1м</a>
+            </td>
+            <td data-label="Склад">Склад Б</td>
+            <td data-label="Остаток">2</td>
+            <td data-label="Минимум">5</td>
+            <td data-label="Статус">
+              <span class="badge badge-danger">Ниже минимума</span>
+            </td>
+          </tr>
+
+          <tr>
+            <td data-label="Товар">SSD 500 ГБ</td>
+            <td data-label="Склад">Склад А</td>
+            <td data-label="Остаток">1</td>
+            <td data-label="Минимум">2</td>
+            <td data-label="Статус">
+              <span class="badge badge-danger">Ниже минимума</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section aria-labelledby="recent-title">
+      <h2 id="recent-title">Последние операции</h2>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Дата</th>
+            <th>Тип</th>
+            <th>Склад</th>
+            <th>Товар</th>
+            <th>Количество</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td data-label="Дата">20.11.2026</td>
+            <td data-label="Тип">Поступление</td>
+            <td data-label="Склад">Склад А</td>
+            <td data-label="Товар">Кабель USB-C 1м</td>
+            <td data-label="Количество">10</td>
+          </tr>
+
+          <tr>
+            <td data-label="Дата">21.11.2026</td>
+            <td data-label="Тип">Перемещение</td>
+            <td data-label="Склад">А → Б</td>
+            <td data-label="Товар">Кабель USB-C 1м</td>
+            <td data-label="Количество">4</td>
+          </tr>
+
+          <tr>
+            <td data-label="Дата">22.11.2026</td>
+            <td data-label="Тип">Списание</td>
+            <td data-label="Склад">Склад Б</td>
+            <td data-label="Товар">Кабель USB-C 1м</td>
+            <td data-label="Количество">2</td>
+          </tr>
+
+          <tr>
+            <td data-label="Дата">23.11.2026</td>
+            <td data-label="Тип">Поступление</td>
+            <td data-label="Склад">Склад А</td>
+            <td data-label="Товар">SSD 500 ГБ</td>
+            <td data-label="Количество">3</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="state-examples" aria-labelledby="states-title">
+      <h2 id="states-title">Примеры состояний интерфейса</h2>
+
+      <p>
+        Это демонстрация: сообщения показаны одновременно, чтобы можно было
+        увидеть оформление каждого состояния.
+      </p>
+
+      <div class="state-message state-loading">
+        <strong>Загрузка:</strong>
+        данные о товарах загружаются…
+      </div>
+
+      <div class="state-message state-empty">
+        <strong>Пустой список:</strong>
+        товары не найдены. Попробуйте изменить параметры поиска.
+      </div>
+
+      <div class="state-message state-error">
+        <strong>Ошибка:</strong>
+        не удалось загрузить данные. Попробуйте ещё раз позже.
+      </div>
+
+      <div class="state-message state-success">
+        <strong>Успех:</strong>
+        операция успешно сохранена.
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
