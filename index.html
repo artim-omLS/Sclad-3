@@ -38,18 +38,72 @@
       </div>
 
       <div class="stat-card">
-        <strong>2</strong>
-        <span>Критических остатков</span>
+        <strong>3</strong>
+        <span>Примера критических остатков</span>
       </div>
 
       <div class="stat-card">
-        <strong>6</strong>
-        <span>Операций за неделю</span>
+        <strong>4</strong>
+        <span>Операции в примере</span>
       </div>
+    </section>
+
+    <section aria-labelledby="stock-title">
+      <h2 id="stock-title">Примеры остатков</h2>
+
+      <p>Демонстрационные остатки отдельных товаров по складам.</p>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Товар</th>
+            <th>Склад</th>
+            <th>Остаток</th>
+            <th>Единица</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td data-label="Товар">
+              <a href="product-card.html">Кабель USB-C 1м</a>
+            </td>
+            <td data-label="Склад">Склад А</td>
+            <td data-label="Остаток">6</td>
+            <td data-label="Единица">шт</td>
+          </tr>
+
+          <tr>
+            <td data-label="Товар">Кабель USB-C 1м</td>
+            <td data-label="Склад">Склад Б</td>
+            <td data-label="Остаток">2</td>
+            <td data-label="Единица">шт</td>
+          </tr>
+
+          <tr>
+            <td data-label="Товар">Кабель USB-C 1м</td>
+            <td data-label="Склад">Склад В</td>
+            <td data-label="Остаток">0</td>
+            <td data-label="Единица">шт</td>
+          </tr>
+
+          <tr>
+            <td data-label="Товар">SSD 500 ГБ</td>
+            <td data-label="Склад">Склад А</td>
+            <td data-label="Остаток">1</td>
+            <td data-label="Единица">шт</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
 
     <section aria-labelledby="critical-title">
       <h2 id="critical-title">Критические остатки</h2>
+
+      <p>
+        Примеры товаров, остаток которых на указанном складе
+        ниже минимального.
+      </p>
 
       <table class="data-table">
         <thead>
@@ -72,6 +126,18 @@
             <td data-label="Минимум">5</td>
             <td data-label="Статус">
               <span class="badge badge-danger">Ниже минимума</span>
+            </td>
+          </tr>
+
+          <tr>
+            <td data-label="Товар">
+              <a href="product-card.html">Кабель USB-C 1м</a>
+            </td>
+            <td data-label="Склад">Склад В</td>
+            <td data-label="Остаток">0</td>
+            <td data-label="Минимум">5</td>
+            <td data-label="Статус">
+              <span class="badge badge-danger">Нет на складе</span>
             </td>
           </tr>
 
